@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body{
+  background-color:#eee;
+  font-size:18px;
+  color:#999;
+}
+#root{
+  background-color:#fff;
+  width:1000px;
+  margin: 50px auto 0;
+  padding:20px;
+  box-sizing: border-box;
+}
+#box{
+  padding:20px;
+}
+#box>ul{
+  display:flex;
+}
+#box>ul>li{
+  margin:0 20px;
+  width:200px;
+  padding:10px;
+  border:1px solid #999;
+  display:flex;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#list{
+  padding:0 20px;
+  border-top:1px solid #666;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#list li{
+  border-bottom:1px solid #666;
+  display:flex;
+  flex-direction: row-reverse;
+  padding:20px 0;
+  justify-content: space-between;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#list li>dl{
+  width:80%;
+  position:relative;
 }
-
-.App-link {
-  color: #61dafb;
+#list li>dl>dt{
+  font-size:23px;
+  color:#097051;
+  margin-bottom:10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#list li>dl>dd>dfn{
+  font-size:19px;
+  padding-right:10px;
+  margin-bottom:10px;
+  color:#ad7408;}
+#list li>dl>dd:last-child{
+  position:absolute;
+  right:0;
+  top:0;}
+#list li>button{
+  width:60px;
+  background-color:#720557;
+  color:#fff;
+  border:none;
+  font-size:25px;
 }

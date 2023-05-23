@@ -28,7 +28,15 @@ function App() {
       onSortChange = {(mySort) => setSortBy(mySort)} />
     <div id="list">
       <ul>
-       { filterList.map((item)  => (<Addinfo key={item.id} info={item} />))}
+       { filterList.map((item)  => (
+       <Addinfo 
+       key={item.id} 
+       info={item}
+      //  onDelete={함수} function 함수(매개변수){}
+       onDelete={
+        (myId) => setList(list.filter(item => item.id !== myId))
+       }
+       />))}
       </ul>
     </div>
     </>

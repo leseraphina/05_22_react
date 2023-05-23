@@ -4,14 +4,21 @@ export default function Box({sortBy,onSortChange}){
     <div id="box">
       <ul>
         <li
-        onClick = {() => onSortChange('petName')}
-        >애기이름 <BiCheckSquare /></li>
+        onClick = {() => onSortChange('petName')}>
+          애기이름 
+          {(sortBy==='petName') && <BiCheckSquare />}
+          
+          </li>
         <li
         onClick = {() => onSortChange('ownerName')}
-        >예약자명 <BiCheckSquare /></li>
+        >예약자명 
+          {(sortBy === 'ownerName') && <BiCheckSquare />}
+        </li>
         <li
         onClick = {() => onSortChange('aptDate')}
-        >날짜 <BiCheckSquare /></li>
+        >날짜 
+        {(sortBy === 'aptDate') && <BiCheckSquare />}
+        </li>
       </ul>
     </div>
   )
